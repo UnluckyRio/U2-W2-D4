@@ -9,7 +9,8 @@
     <!-- Title -->
     <title></title>
     <!-- Link Bootstrap.css -->
-    <link href="../assets/css/custom-bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/scss/bootstrap.css" />
+    <link rel="stylesheet" href="../assets/scss/style.css" />
     <!-- Icon -->
     <!-- Fonts -->
     <link
@@ -20,16 +21,628 @@
   <!-- Body -->
   <body>
     <!-- Header -->
-    <header></header>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <!-- Logo ridimensionato -->
+          <img
+            src="../assets/img/361278.svg"
+            alt="logo"
+            width="32"
+            height="32"
+            class="me-2"
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#top"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#saldi">Saldi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#welcome-summer">Welcome Summer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#last-minute">Last Minute</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#recensioni">Recensioni</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Cerca posti da sogno"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-danger" type="submit">
+                Cerca
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Bottone Conta viaggi -->
+    <div class="container mt-3">
+      <button id="contaViaggiBtn" class="btn btn-info text-light">
+        Conta viaggi
+      </button>
+      <!-- Bottone per contare i viaggi -->
+    </div>
     <!-- Main -->
-    <main></main>
+    <main id="top">
+      <!-- Card principale centrata e ampia -->
+      <div class="container my-4">
+        <div class="card shadow-sm border-0 bg-light">
+          <div class="card-body px-5 py-5">
+            <!-- Titolo grande con parte colorata e tagline -->
+            <h1 class="display-1 fw-light" style="color: #5726c3">
+              Eveline-R
+              <span
+                class="fs-4 fw-normal"
+                style="color: #cb2376; position: relative; top: -20px"
+              >
+                &mdash; Feel the Freedom</span
+              >
+            </h1>
+            <!-- Linea divisoria -->
+            <hr />
+            <!-- Sottotitolo in corsivo, margine superiore ridotto per avvicinarlo al titolo -->
+            <p class="fs-3 fst-italic mt-1" style="color: #cb2376">
+              Scopri le destinazioni più calde del momento!
+            </p>
+            <!-- Bottone grande -->
+            <a
+              href="#"
+              class="btn btn-info btn-lg mt-3 px-5 fw-bold"
+              style="
+                color: white;
+                background-color: #8625a5;
+                border-color: #8625a5;
+              "
+            >
+              Prenota ora
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Sezione Saldi con cards e bottone Nascondi -->
+      <div class="container my-5" id="saldi">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="fw-bold">Saldi</h2>
+          <!-- Link per nascondere/mostrare la sezione -->
+          <a
+            href="#"
+            id="toggleSaldi"
+            class="btn btn-outline-epicode-2 text-epicode-2 text-decoration-none"
+            >Nascondi sezione</a
+          >
+        </div>
+        <!-- Sezione che contiene le card, da nascondere/mostrare -->
+        <div id="saldiSection">
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+              <div
+                class="card h-100 border-info border-6 card-custom-saldi"
+                style="border-width: 6px"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                  class="card-img-top"
+                  alt="Mare"
+                />
+                <div class="card-body bg-dark">
+                  <h5 class="card-title fw-bold text-info">Titolo</h5>
+                  <p class="card-text text-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia et possimus aliquid deserunt veritatis natus ullam
+                    perspiciatis temporibus minima repudiandae!
+                  </p>
+                  <a href="#" class="btn btn-info text-white">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2  -->
+            <div class="col">
+              <div
+                class="card h-100 border-info border-6 card-custom-saldi"
+                style="border-width: 6px"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                  class="card-img-top"
+                  alt="Mare"
+                />
+                <div class="card-body bg-dark">
+                  <h5 class="card-title fw-bold text-info">Titolo</h5>
+                  <p class="card-text text-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia et possimus aliquid deserunt veritatis natus ullam
+                    perspiciatis temporibus minima repudiandae!
+                  </p>
+                  <a href="#" class="btn btn-info text-white">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+              <div
+                class="card h-100 border-info border-6 card-custom-saldi"
+                style="border-width: 6px"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                  class="card-img-top"
+                  alt="Mare"
+                />
+                <div class="card-body bg-dark">
+                  <h5 class="card-title fw-bold text-info">Titolo</h5>
+                  <p class="card-text text-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia et possimus aliquid deserunt veritatis natus ullam
+                    perspiciatis temporibus minima repudiandae!
+                  </p>
+                  <a href="#" class="btn btn-info text-white">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col">
+              <div
+                class="card h-100 border-info border-6 card-custom-saldi"
+                style="border-width: 6px"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                  class="card-img-top"
+                  alt="Mare"
+                />
+                <div class="card-body bg-dark">
+                  <h5 class="card-title fw-bold text-info">Titolo</h5>
+                  <p class="card-text text-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia et possimus aliquid deserunt veritatis natus ullam
+                    perspiciatis temporibus minima repudiandae!
+                  </p>
+                  <a href="#" class="btn btn-info text-white">Prenota</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fine sezione Saldi -->
+      <!-- Sezione Welcome Summer con cards e bottone Nascondi -->
+      <div class="container my-5" id="welcome-summer">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="fw-bold">Welcome Summer</h2>
+          <!-- Link per nascondere/mostrare la sezione -->
+          <a
+            href="#"
+            id="toggleSummer"
+            class="btn btn-outline-epicode-2 text-epicode-2"
+            style="text-decoration: none"
+            >Nascondi sezione</a
+          >
+        </div>
+        <!-- Sezione che contiene le card, da nascondere/mostrare -->
+        <div id="summerSection">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+              <div
+                class="card h-100 shadow-lg position-relative card-custom-saldi bg-dark"
+              >
+                <!-- Badge HOT in alto a destra -->
+                <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                  >HOT</span
+                >
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                  class="card-img-top"
+                  alt="Mare"
+                />
+                <div class="card-body bg-dark">
+                  <h5 class="card-title fw-bold text-info">Titolo</h5>
+                  <p class="card-text text-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia et possimus aliquid deserunt veritatis natus ullam
+                    perspiciatis temporibus minima repudiandae!
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+              <div
+                class="card h-100 shadow-lg position-relative card-custom-saldi"
+              >
+                <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                  >HOT</span
+                >
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                  class="card-img-top"
+                  alt="Mare"
+                />
+                <div class="card-body bg-dark">
+                  <h5 class="card-title fw-bold text-info">Titolo</h5>
+                  <p class="card-text text-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia et possimus aliquid deserunt veritatis natus ullam
+                    perspiciatis temporibus minima repudiandae!
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+              <div
+                class="card h-100 shadow-lg position-relative card-custom-saldi"
+              >
+                <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                  >HOT</span
+                >
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                  class="card-img-top"
+                  alt="Mare"
+                />
+                <div class="card-body bg-dark">
+                  <h5 class="card-title fw-bold text-info">Titolo</h5>
+                  <p class="card-text text-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia et possimus aliquid deserunt veritatis natus ullam
+                    perspiciatis temporibus minima repudiandae!
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col">
+              <div
+                class="card h-100 shadow-lg position-relative card-custom-saldi"
+              >
+                <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                  >HOT</span
+                >
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                  class="card-img-top"
+                  alt="Mare"
+                />
+                <div class="card-body bg-dark">
+                  <h5 class="card-title fw-bold text-info">Titolo</h5>
+                  <p class="card-text text-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia et possimus aliquid deserunt veritatis natus ullam
+                    perspiciatis temporibus minima repudiandae!
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col">
+              <div
+                class="card h-100 shadow-lg position-relative card-custom-saldi"
+              >
+                <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                  >HOT</span
+                >
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                  class="card-img-top"
+                  alt="Mare"
+                />
+                <div class="card-body bg-dark">
+                  <h5 class="card-title fw-bold text-info">Titolo</h5>
+                  <p class="card-text text-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia et possimus aliquid deserunt veritatis natus ullam
+                    perspiciatis temporibus minima repudiandae!
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col">
+              <div
+                class="card h-100 shadow-lg position-relative card-custom-saldi"
+              >
+                <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                  >HOT</span
+                >
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                  class="card-img-top"
+                  alt="Mare"
+                />
+                <div class="card-body bg-dark">
+                  <h5 class="card-title fw-bold text-info">Titolo</h5>
+                  <p class="card-text text-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia et possimus aliquid deserunt veritatis natus ullam
+                    perspiciatis temporibus minima repudiandae!
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fine sezione Welcome Summer -->
+      <!-- Offerta del giorno -->
+      <div class="container my-5 d-none d-md-block">
+        <!-- d-none d-md-block: nasconde la sezione su schermi piccoli -->
+        <h3 class="fw-bold mb-3">Offerta del giorno</h3>
+        <div class="row align-items-center">
+          <!-- Immagine grande -->
+          <div class="col-md-8">
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+              class="img-fluid rounded shadow-lg w-100 border-info border-10"
+              style="
+                border-width: 10px;
+                border-color: #00ffea !important;
+                border-style: solid;
+                border-radius: 2rem;
+              "
+              alt="Offerta del giorno"
+            />
+          </div>
+          <!-- Testo a destra -->
+          <div class="col-md-4 mt-4 mt-md-0">
+            <h1 class="display-4 fw-light">Fushifaru<br />Maldives</h1>
+            <div class="text-muted mb-2" style="font-size: 0.95rem">
+              15.01.2021 - 31.01.2021
+            </div>
+            <div class="mb-3">
+              Ville a partire da 500 €,<br />non fartele sfuggire!
+            </div>
+            <span class="badge bg-dark fw-semibold" style="font-size: 0.9rem"
+              >Best offer</span
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Last Minute -->
+      <div class="container mb-5" id="last-minute">
+        <h4 class="fw-bold mb-3">Last Minute</h4>
+        <div class="d-flex flex-row flex-nowrap overflow-auto gap-3">
+          <!-- Mini-card 1 -->
+          <div
+            class="card shadow-lg"
+            style="min-width: 220px; border-radius: 12px"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+              class="card-img-top"
+              style="border-radius: 12px"
+              alt="Last Minute"
+            />
+          </div>
+          <!-- Mini-card 2 -->
+          <div
+            class="card shadow-lg"
+            style="min-width: 220px; border-radius: 12px"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+              class="card-img-top"
+              style="border-radius: 12px"
+              alt="Last Minute"
+            />
+          </div>
+          <!-- Mini-card 3 -->
+          <div
+            class="card shadow-lg"
+            style="min-width: 220px; border-radius: 12px"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+              class="card-img-top"
+              style="border-radius: 12px"
+              alt="Last Minute"
+            />
+          </div>
+          <!-- Mini-card 4 -->
+          <div
+            class="card shadow-lg"
+            style="min-width: 220px; border-radius: 12px"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+              class="card-img-top"
+              style="border-radius: 12px"
+              alt="Last Minute"
+            />
+          </div>
+          <!-- Mini-card 5 -->
+          <div
+            class="card shadow-lg"
+            style="min-width: 220px; border-radius: 12px"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+              class="card-img-top"
+              style="border-radius: 12px"
+              alt="Last Minute"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Sezione Dicono di noi -->
+      <div class="container my-5" id="recensioni">
+        <h2 class="text-center fw-bold mb-4">Dicono di noi</h2>
+        <div class="row mb-3 align-items-start">
+          <div class="col-auto d-flex justify-content-center">
+            <!-- Avatar utente con bordo azzurro -->
+            <img
+              src="../assets/img/vecteezy_default-male-avatar-profile-icon-social-media-chatting_25337669.jpg"
+              class="rounded-circle border border-info border-2 avatar-custom"
+              alt="Avatar"
+              style="width: 60px; height: 60px; object-fit: cover"
+            />
+          </div>
+          <div class="col">
+            <span class="fw-bold">Username</span>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+        <div class="row mb-3 align-items-start">
+          <div class="col-auto d-flex justify-content-center">
+            <img
+              src="../assets/img/vecteezy_default-male-avatar-profile-icon-social-media-chatting_25337669.jpg"
+              class="rounded-circle border border-info border-2 avatar-custom"
+              alt="Avatar"
+              style="width: 60px; height: 60px; object-fit: cover"
+            />
+          </div>
+          <div class="col">
+            <span class="fw-bold">Username</span>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+        <div class="row mb-3 align-items-start">
+          <div class="col-auto d-flex justify-content-center">
+            <img
+              src="../assets/img/vecteezy_default-male-avatar-profile-icon-social-media-chatting_25337669.jpg"
+              class="rounded-circle border border-info border-2 avatar-custom"
+              alt="Avatar"
+              style="width: 60px; height: 60px; object-fit: cover"
+            />
+          </div>
+          <div class="col">
+            <span class="fw-bold">Username</span>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
     <!-- Footer -->
-    <footer></footer>
+    <footer class="bg-dark text-center text-light py-5 mt-5">
+      <!-- Bottone Contattaci centrato -->
+      <button
+        type="button"
+        class="btn btn-outline-secondary mb-3"
+        data-bs-toggle="modal"
+        data-bs-target="#contattaModal"
+      >
+        Contattaci
+      </button>
+      <!-- Bottone che apre il modale -->
+      <div class="fs-10">
+        &copy; 2021 Kalina Travel LTD. All Rights Reserved.
+      </div>
+    </footer>
+    <!-- Modale Contattaci -->
+    <div
+      class="modal fade"
+      id="contattaModal"
+      tabindex="-1"
+      aria-labelledby="contattaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contattaModalLabel">Contattaci</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="emailInput" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailInput"
+                  placeholder="Inserisci la tua email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="messageInput" class="form-label">Messaggio</label>
+                <textarea
+                  class="form-control"
+                  id="messageInput"
+                  rows="3"
+                  placeholder="Scrivi il tuo messaggio"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Chiudi
+            </button>
+            <button type="button" class="btn btn-primary">Invia</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Link Bootstrap.js -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+    <!-- Link script.js -->
+    <script src="../script/script.js"></script>
   </body>
 </html>

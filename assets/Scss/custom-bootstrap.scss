@@ -1,18 +1,20 @@
 @import "../scss/	bootstrap/functions";
 @import "../scss/bootstrap/variables";
 
-$new-primary: #000000;
-$new-secondary: #000000;
+$epicode-1: #5726c3;
+$epicode-2: #8625a5;
+$epicode-3: #cb2376;
 $new-success: #000000;
-$new-info: #000000;
+$new-info: #00ffea;
 $new-warning: #000000;
-$new-danger: #000000;
-$new-light: #000000;
+$new-danger: #ff0077;
+$new-light: #f3eeff;
 $new-dark: #000000;
 
 $new-theme-colors: (
-  "primary": $new-primary,
-  "secondary": $new-secondary,
+  "primary": $epicode-1,
+  "secondary": $epicode-2,
+  "epicode-3": $epicode-3,
   "success": $new-success,
   "info": $new-info,
   "warning": $new-warning,
@@ -22,5 +24,99 @@ $new-theme-colors: (
 );
 
 $theme-colors: map-merge($theme-colors, $new-theme-colors);
+
+// Estensione delle classi di font-size fino a .fs-10
+$font-sizes: (
+  1: 2.5rem,
+  // .fs-1
+  2: 2rem,
+  // .fs-2
+  3: 1.75rem,
+  // .fs-3
+  4: 1.5rem,
+  // .fs-4
+  5: 1.25rem,
+  // .fs-5
+  6: 1rem,
+  // .fs-6
+  7: 0.85rem,
+  // .fs-7
+  8: 0.75rem,
+  // .fs-8
+  9: 0.65rem,
+  // .fs-9
+  10: 0.55rem // .fs-10,,,,,,
+) !default; // Nuovi valori più piccoli
+
+// Estensione delle classi di border-width fino a .border-10
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+  6: 6px,
+  // Nuovo
+  7: 7px,
+  // Nuovo
+  8: 8px,
+  // Nuovo
+  9: 9px,
+  // Nuovo
+  10: 10px // Nuovo,,,,,,
+) !default;
+
+// Modifica padding dei bottoni (orizzontale 2.5rem, verticale 0.75rem)
+$btn-padding-x: 2.5rem !default; // Padding orizzontale
+$btn-padding-y: 0.75rem !default; // Padding verticale
+
+// Modifica gutter di default
+$gutter: 0.5rem !default; // Gutter ridotto
+
+// Stile di default delle card
+$card-bg: $dark !default; // Sfondo dark
+$card-color: $info !default; // Testo info
+$card-border-radius: 2rem !default; // Border radius grande
+
+// Border radius pillola per badge, input e bottoni
+$badge-border-radius: 10rem !default; // Badge pillola
+$input-border-radius: 10rem !default; // Input pillola
+$btn-border-radius: 10rem !default; // Bottoni pillola
+
+// Nuovi breakpoint 3xl e 4xl
+$grid-breakpoints: map-merge(
+  $grid-breakpoints,
+  (
+    3xl: 1600px,
+    4xl: 1800px,
+  )
+);
+$container-max-widths: map-merge(
+  $container-max-widths,
+  (
+    3xl: 1520px,
+    4xl: 1720px,
+  )
+);
+
+// Card personalizzata per sezioni Saldi e Welcome Summer
+.card-custom-saldi {
+  background-color: #222; // Sfondo scuro
+  color: #00ffea; // Testo ciano
+  border: 3px solid #00ffea; // Bordo ciano
+  border-radius: 2rem; // Angoli arrotondati
+}
+.card-custom-saldi .card-title {
+  color: #00ffea; // Titolo ciano
+}
+.card-custom-saldi .btn {
+  background-color: #00ffea; // Bottone ciano
+  color: #222; // Testo bottone scuro
+  border-radius: 2rem; // Bottone arrotondato
+  border: none;
+}
+.card-custom-saldi .btn:hover {
+  background-color: #00cfcf; // Effetto hover più scuro
+}
 
 @import "../scss/bootstrap.scss";
